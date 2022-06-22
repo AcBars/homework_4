@@ -8,27 +8,38 @@ using static System.Console;
 Clear();
 WriteLine("Введите размер массива");
 int a =Convert.ToInt32(ReadLine());
+//int maxValue=new Random().Next(-100,100);
+//int minValue=new Random().Next(-100,100);
 
-WriteLine($" [{String.Join(",", ManualArray(a))}]");
-//ManualArray (a);
-
-
-
+WriteLine($" [{String.Join(",", RandomArray(a))}]");
 
 
 
-int [] ManualArray(int a)
+
+
+
+
+// int [] ManualArray(int a)
+// {
+//     int [] result_array = new int[a];
+//     for(int i=0; i<a; i++)
+//     {
+//         WriteLine($"Введите {i+1} элемент массива.");
+//         result_array[i]=Convert.ToInt32(ReadLine());
+//         Clear();
+//     }
+
+//     return result_array;
+// }
+
+int [] RandomArray (int size)
 {
-    int [] result_array = new int[a];
-    for(int i=0; i<a; i++)
+    int [] array= new int [size];
+    for (int i = 0; i <size; i++)
+
     {
-        WriteLine($"Введите {i+1} элемент массива.");
-        result_array[i]=Convert.ToInt32(ReadLine());
-        Clear();
+     array [i]=new Random().Next(-100,100);
     }
-
-    return result_array;
+    return array;
 }
-
-
 
